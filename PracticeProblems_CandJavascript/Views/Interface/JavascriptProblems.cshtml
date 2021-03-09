@@ -1,0 +1,141 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Javascript Problems</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="">
+            <h1>Zack's JavaScript Assignment</h1>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Part 1</h3>
+                <hr>
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Problem 1</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Reverse a string:</h6>
+                        <p class="card-text" id="probOne">Hello World!</p>
+                        <button type="button" class="btn btn-dark" onclick="reverseString()">Reverse</button>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Problem 2</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Capitalize letter:</h6>
+
+                        <p class="card-text" id="probTwo">hello my sweet world</p>
+                        <button type="button" class="btn btn-dark" onclick="capitalizeLetters()">Capitalize</button>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Problem 3</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Compress a string:</h6>
+                        <p class="card-text" id="probThree">aaabbbbbccccaacccbbbaaabbbaaa</p>
+                        <button type="button" class="btn btn-dark" onclick="compressString()">Compress</button>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Problem 4</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Check if palindrome:</h6>
+                        <p class="card-text" id="probFour">madam</p>
+                        <button type="button" class="btn btn-dark" onclick="isPalindrome()">Check</button><br>
+                        <h4><a href="#" class="badge badge-success" id="probFourC"></a></h4>
+
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Test Palindrome" aria-label="Test Palindrome"
+                                   aria-describedby="basic-addon2" id="probFourB">
+                            <div class="input-group-append">
+                                <button class="btn btn-dark" type="button"
+                                        onclick="isInputPalindrome(document.getElementById('probFourB').value)">
+                                    Ckeck
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <h3>Part 2</h3>
+                <hr>
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Problem 1</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Happy Numbers:</h6>
+                        <p class="card-text" id="probFive"></p>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Test Happy Number" aria-label="Test Happy Number"
+                                   aria-describedby="basic-addon2" id="isHappy">
+                            <div class="input-group-append">
+                                <button class="btn btn-dark" type="button"
+                                        onclick="isHappyNumber(document.getElementById('isHappy').value)">
+                                    Ckeck
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Problem 2</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">All prime numbers between 1 and 100:</h6>
+                        <p class="card-text" id="probSix"></p>
+                        <button type="button" class="btn btn-dark" onclick="firstPrimes()">Show Primes</button>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Problem 3</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">First 10 Fibonacci numbers::</h6>
+                        <p class="card-text" id="probSevenA"></p>
+                        <button type="button" class="btn btn-dark" onclick="getFiboNums()">Find</button><br>
+                        <div id="probSevenB"></div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Starter Number" aria-label="Starter Number"
+                                   aria-describedby="basic-addon2" id="fibo">
+                            <div class="input-group-append">
+                                <button class="btn btn-dark" type="button"
+                                        onclick="getAnyFiboNums(document.getElementById('fibo').value)">
+                                    Ckeck
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="~/js/site.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>
